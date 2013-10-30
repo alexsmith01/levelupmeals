@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  location_name: MyString
+  location_address: MyString
+  point_of_contact: MyText
+  fridge: 
+
+two:
+  location_name: MyString
+  location_address: MyString
+  point_of_contact: MyText
+  fridge: 
