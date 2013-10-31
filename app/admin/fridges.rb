@@ -1,4 +1,17 @@
 ActiveAdmin.register Fridge do
+  index do
+    selectable_column    
+    column :fridge_brand
+    column :purchase_date    
+    column :parts_warranty_end_date
+    column :compressor_warranty_end_date
+    column :other_warranty_information    
+    column "Receipt" do |fr|
+      fr.receipt_file_name
+    end    
+    default_actions
+  end
+  
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Details" do
       f.input :fridge_brand
@@ -8,6 +21,6 @@ ActiveAdmin.register Fridge do
       f.input :other_warranty_information
       f.input :receipt, :as => :file
     end
-    f.buttons    
+    f.buttons
   end
 end

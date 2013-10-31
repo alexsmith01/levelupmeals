@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  order_state: MyText
+  qty: 1
+  credit_card: MyString
+
+two:
+  order_state: MyText
+  qty: 1
+  credit_card: MyString

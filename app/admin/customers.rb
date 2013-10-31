@@ -6,7 +6,7 @@ ActiveAdmin.register Customer do
     column :last_name
     column :email    
     column :state do |st|
-      status_tag(st.state ? 'enable' : 'disable' )
+      status_tag(st.state ? 'enable' : 'disable', :class => st.state ? 'green' : '' )
     end
     default_actions
   end
