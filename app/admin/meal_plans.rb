@@ -1,4 +1,5 @@
 ActiveAdmin.register MealPlan do
+  menu :priority => 3
   index do
     selectable_column
     column :title

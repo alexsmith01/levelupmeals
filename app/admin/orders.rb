@@ -1,4 +1,5 @@
 ActiveAdmin.register Order do
+  menu :priority => 1
   index do
     selectable_column
     column "Order" do |order|

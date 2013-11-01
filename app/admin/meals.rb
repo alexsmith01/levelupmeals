@@ -1,6 +1,8 @@
 ActiveAdmin.register Meal do
+  menu :priority => 4
   index do
-    selectable_column    
+    selectable_column
+    column :id        
     column :meal_type
     column :meal_title    
     column :meal_description

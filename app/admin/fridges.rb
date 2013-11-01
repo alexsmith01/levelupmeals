@@ -1,13 +1,15 @@
 ActiveAdmin.register Fridge do
+  menu :priority => 6
   index do
-    selectable_column    
+    selectable_column
+    column :id        
     column :fridge_brand
     column :purchase_date    
     column :parts_warranty_end_date
     column :compressor_warranty_end_date
     column :other_warranty_information    
     column "Receipt" do |fr|
-      fr.receipt_file_name
+      link_to(fr.receipt_file_name, fr.receipt.url) if fr.receipt.present?
     end    
     default_actions
   end

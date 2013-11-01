@@ -1,13 +1,14 @@
 ActiveAdmin.register Customer do
+  menu :priority => 2
   index do
     selectable_column
     #id_column
     column :first_name
     column :last_name
     column :email    
-    column :state do |st|
-      status_tag(st.state ? 'enable' : 'disable', :class => st.state ? 'green' : '' )
-    end
+    # column :state do |st|
+      # status_tag(st.state ? 'enable' : 'disable', :class => st.state ? 'green' : '' )
+    # end
     default_actions
   end
   

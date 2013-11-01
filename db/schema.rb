@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131031134947) do
+ActiveRecord::Schema.define(:version => 20131101083605) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -72,8 +72,17 @@ ActiveRecord::Schema.define(:version => 20131031134947) do
     t.string   "location_address"
     t.text     "point_of_contact"
     t.integer  "fridge_id"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+    t.date     "partnership_date"
+    t.string   "partnership_agreement_file_name"
+    t.string   "partnership_agreement_content_type"
+    t.integer  "partnership_agreement_file_size"
+    t.datetime "partnership_agreement_updated_at"
+    t.string   "key_agreement_file_name"
+    t.string   "key_agreement_content_type"
+    t.integer  "key_agreement_file_size"
+    t.datetime "key_agreement_updated_at"
   end
 
   add_index "delivery_locations", ["fridge_id"], :name => "index_delivery_locations_on_fridge_id"
