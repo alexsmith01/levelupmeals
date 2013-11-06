@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131101083605) do
+ActiveRecord::Schema.define(:version => 20131106020749) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -99,6 +99,7 @@ ActiveRecord::Schema.define(:version => 20131101083605) do
     t.string   "receipt_content_type"
     t.integer  "receipt_file_size"
     t.datetime "receipt_updated_at"
+    t.integer  "fridge_id"
   end
 
   create_table "meal_plans", :force => true do |t|
@@ -122,6 +123,7 @@ ActiveRecord::Schema.define(:version => 20131101083605) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.integer  "meal_id"
   end
 
   create_table "orders", :force => true do |t|

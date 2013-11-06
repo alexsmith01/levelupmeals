@@ -2,19 +2,20 @@ ActiveAdmin.register Meal do
   menu :priority => 4
   index do
     selectable_column
-    column :id        
+    column "Meal ID", :meal_id        
     column :meal_type
     column :meal_title    
     column :meal_description
     column :meal_ingredients
     column "Photo" do |meal|
-      link_to(image_tag(meal.photo.url(:thumb), :height => '100', :width => '100'), admin_meal_path(meal))
+      link_to(image_tag(meal.photo.url(:thumb), :height => '100', :width => '100'), meal.photo.url(:original))
     end    
     default_actions
   end
   
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Details" do
+      f.input :meal_id
       f.input :meal_type, :as => :select, :collection => ["lunch", "dinner"]
       f.input :meal_title
       f.input :meal_description

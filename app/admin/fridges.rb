@@ -2,7 +2,7 @@ ActiveAdmin.register Fridge do
   menu :priority => 6
   index do
     selectable_column
-    column :id        
+    column "Fridge ID", :fridge_id        
     column :fridge_brand
     column :purchase_date    
     column :parts_warranty_end_date
@@ -16,6 +16,7 @@ ActiveAdmin.register Fridge do
   
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Details" do
+      f.input :fridge_id
       f.input :fridge_brand
       f.input :purchase_date, :as => :datetime
       f.input :parts_warranty_end_date, :as => :datetime
