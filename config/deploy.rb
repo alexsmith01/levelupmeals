@@ -3,8 +3,9 @@ load 'deploy' if respond_to?(:namespace) # cap2 differentiator
 set :stages, %w(production)
 set :default_stage, "production"
 require 'capistrano/ext/multistage'
+require "bundler/capistrano" 
 
-set :user, 'levelupload'
+set :user, 'burte'
 set :application, 'default'
 
 set :repository, 'git@github.com:alexsmith01/levelupmeals.git'
@@ -26,6 +27,9 @@ INSTALL
   $stderr.puts "Exception thrown: #{e}"
   exit 1
 end
+
+set :deploy_to, "/home/content/b/u/r/#{user}/orders-level-up-meals/apps/#{default_stage}/#{application}"
+set :deploy_via, :copy
 
 namespace :logs do
 

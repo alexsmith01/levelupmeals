@@ -17,6 +17,9 @@ gem 'jquery-rails', '~> 2.3.0'
 gem 'jquery-ui-rails'
 
 group :development do
+  gem 'pry-rails'
+  gem 'awesome_print'
+  gem 'binding_of_caller'
   gem 'pg'  
   gem 'openminds_deploy'
   gem 'capistrano', '~> 2.5'
